@@ -1,85 +1,88 @@
-/**
- * HomePage Component
- * 
- * The landing page of the Picsum Photo Gallery application.
- * Displays a welcome message, call-to-action buttons, and a sample photo grid.
- * Serves as the entry point for users to explore the photo gallery.
- */
+{/* 
+  HomePage Component
+  
+  The landing page of the Picsum Photo Gallery application.
+  Displays a welcome message, call-to-action buttons, and a sample photo grid.
+  Serves as the entry point for users to explore the photo gallery.
+*/}
 
-// React and Routing
+{/* React and Routing */}
 import { useNavigate } from 'react-router-dom';
 
-// Components
+{/* Components */}
 import { Button } from '../components/common';
 
-/**
- * HomePage Function Component
- * 
- * Returns the JSX for the HomePage component
- */
+{/*
+  HomePage Function Component
+  
+  Returns the JSX for the HomePage component
+*/}
 export default function HomePage() {
   // Navigation hook to redirect to other routes
   const navigate = useNavigate();
 
   return (
-    /**
-     * Container element for the HomePage component
-     * 
-     * Applies a gradient background, flexbox layout, and padding
-     */
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 flex flex-col items-center justify-center p-6">
-      /**
-       * Inner container element for the welcome message and buttons
-       * 
-       * Applies a maximum width, horizontal margin, and text alignment
-       */
-      <div className="max-w-4xl mx-auto text-center">
-        /**
-         * Welcome message heading
-         * 
-         * Displays the title of the application
-         */
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+    <div 
+      className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 flex flex-col items-center justify-center p-6"
+      /* 
+        Container element for the HomePage component
+        Applies a gradient background, flexbox layout, and padding 
+      */
+    >
+      <div 
+        className="max-w-4xl mx-auto text-center"
+        /* 
+          Inner container element for the welcome message and buttons
+          Applies a maximum width, horizontal margin, and text alignment
+        */
+      >
+        <h1 
+          className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
+          /* 
+            Welcome message heading
+            Displays the title of the application
+          */
+        >
           Welcome to Picsum Gallery
         </h1>
-        /**
-         * Welcome message paragraph
-         * 
-         * Displays a brief description of the application
-         */
-        <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+        <p 
+          className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto"
+          /* 
+            Welcome message paragraph
+            Displays a brief description of the application
+          */
+        >
           Explore a beautiful collection of free-to-use photos from Picsum Photos.
           Perfect for your next project or just for inspiration.
         </p>
-        /**
-         * Container element for the call-to-action buttons
-         * 
-         * Applies a flexbox layout and horizontal margin
-         */
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          /**
-           * Browse Photos button
-           * 
-           * Redirects to the photos route when clicked
-           */
+        <div 
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+          /* 
+            Container element for the call-to-action buttons
+            Applies a flexbox layout and horizontal margin
+          */
+        >
           <Button 
             variant="primary" 
             size="lg"
             onClick={() => navigate('/photos')}
             className="w-full sm:w-auto"
+            /* 
+              Browse Photos button
+              Redirects to the photos route when clicked
+            */
           >
             Browse Photos
           </Button>
-          /**
-           * Visit Picsum button
-           * 
-           * Opens the Picsum Photos website in a new tab when clicked
-           */
           <Button 
             variant="secondary" 
             size="lg"
             onClick={() => window.open('https://picsum.photos', '_blank')}
             className="w-full sm:w-auto"
+            /* 
+              Visit Picsum button
+              Opens the Picsum Photos website in a new tab when clicked
+            */
           >
             Visit Picsum
           </Button>
