@@ -48,14 +48,6 @@ export default function HomePage() {
            *
            * Displays a brief description of the application
            */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Welcome to Picsum Gallery
-          </h1>
-          {/**
-           * Welcome message paragraph
-           *
-           * Displays a brief description of the application
-           */}
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Explore a beautiful collection of free-to-use photos from Picsum
             Photos. Perfect for your next project or just for inspiration.
